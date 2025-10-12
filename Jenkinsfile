@@ -8,12 +8,11 @@ pipeline {
     }
 
     stages {
-        // STAGE 1 HAS BEEN REMOVED. The pipeline now starts with the build.
         stage('1. Build Docker Image') {
             steps {
                 // Build the Docker image using the Dockerfile in your repo
                 script {
-                    docker.build(DOCK-ER_IMAGE, '.')
+                    docker.build(DOCKER_IMAGE, '.') // This line is now fixed
                 }
             }
         }
